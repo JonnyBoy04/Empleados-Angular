@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <h1>Formulario</h1>
+  <form (submit)="agregar()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nuevoEmpleado.nombre"
+          placeholder="Ingresa tu nombre">
+      </div>
+      <div class="col-md-6">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correo" name="correo" [(ngModel)]="nuevoEmpleado.correo"
+          placeholder="Ingresa tu correo">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono" [(ngModel)]="nuevoEmpleado.telefono"
+          placeholder="Ingresa tu teléfono">
+      </div>
+      <div class="col-md-6">
+        <label for="fechaIngreso" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso"
+          [(ngModel)]="nuevoEmpleado.fechaIngreso">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Sexo</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" [(ngModel)]="nuevoEmpleado.sexo" id="masculino"
+              value="masculino">
+            <label class="form-check-label" for="masculino">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" [(ngModel)]="nuevoEmpleado.sexo" id="femenino"
+              value="femenino">
+            <label class="form-check-label" for="femenino">Femenino</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+</div>
